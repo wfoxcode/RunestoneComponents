@@ -14,7 +14,7 @@ paver.setuputils.install_distutils_tasks()
 sys.path.append(os.getcwd())
 
 # The project name, for use below.
-project_name = 'RunestoneComponents'
+project_name = 'testing'
 
 master_url = 'http://127.0.0.1:8000'
 if not master_url:
@@ -30,7 +30,7 @@ options(
 
     build=Bunch(
         builddir=serving_dir,
-        sourcedir=".",
+        sourcedir="_sources",
         outdir=serving_dir,
         confdir=".",
         template_args={
@@ -40,9 +40,6 @@ options(
             'python3': 'false',
             'dburl': '',
             'default_ac_lang': 'python',
-            'jobe_server': 'http://jobe2.cosc.canterbury.ac.nz',
-            'proxy_uri_runs': '/jobe/index.php/restapi/runs/',
-            'proxy_uri_files': '/jobe/index.php/restapi/files/',
             'downloads_enabled': 'false',
             'enable_chatcodes': 'false',
             'allow_pairs': 'false',
